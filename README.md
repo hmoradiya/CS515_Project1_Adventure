@@ -12,4 +12,4 @@ python adventure.py loop.map
 
 #How to Play
 
-In the game, you navigate through different rooms in the school by typing commands such as "go school_library" or "get key". Your objective is to find and rescue students as possible the school exit. You can interact with objects in the rooms by using commands such as "get" or "drop".
+In the game, you navigate through different rooms in the school by typing commands such as "go school_library" or "get key". Your objective is to find and rescue students as possible from the school exit. You can interact with objects in the rooms by using commands such as "get" or "drop". Also, you can use "help" to know what to do?
