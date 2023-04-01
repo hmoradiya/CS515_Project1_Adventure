@@ -30,15 +30,21 @@ NO
 
 **List of the three extensions**
 
-**1. "drop" verb or "drop_all" verb**
+**1. "help" verb**
+
+The "help" command is typically invoked by typing "help" followed by pressing the Enter key. The game then displays a list of available commands.
+
+For example, if a player types "help" in the game, the game may display a list of available commands such as "go", "get", "drop", "drop_all", "look", "inventory", "quit", and "help".
+
+**2. "drop" verb or "drop_all" verb**
 
 There are two commands for dropping items in the game: "drop" and "drop_all". The "drop" command lets you discard a specific item in your inventory at your current location, while the "drop_all" command lets you drop all items without specifying each one.
    
-**2. Locked doors** 
+**3. Locked doors** 
 
 To complete the game, you must exit through the school's exit gate with the students. However, the gate is locked and requires a key in your inventory to unlock it.
   
-**3. Winning and losing conditions**
+**4. Winning and losing conditions**
 
 The winning condition is to have students in your inventory to saved all the students from the fire by the time you exit through the school exit gate. If you exit without students in your inventory, the game is over and you have failed to save them. and as result you loss the game!
    
