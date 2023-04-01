@@ -28,7 +28,7 @@ This code not have any Bug and Issues.
 
 NO
 
-**List of the three extensions**
+**List of the extensions**
 
 **1. "help" verb**
 
