@@ -85,6 +85,10 @@ while True:
                 player_location = next_room_index
                 current_room = next_room
                 print_room(current_room)
+                # Check if the player has reached the last room
+                if player_location == len(map_data) - 1:
+                    print("Congratulations, you've reached the end of the game!")
+                    break
 
         else:
             print("There's no way to go " + direction + ".")
@@ -105,12 +109,13 @@ while True:
 
     # Handle the "drop" verb
     elif verb == "drop":
-        if player_inventory != 0:
+        item_name = " ".join(args)
+        if item_name in player_inventory:
             player_inventory.remove(item_name)
             current_room["items"].append(item_name)
             print("You drop the " + item_name + ".")
         else:
-            print("There's no " + item_name + " here.")
+            print("You're not carrying a " + item_name + ".")
 
     # Handle the "drop all" verb
     elif verb == "drop_all":
