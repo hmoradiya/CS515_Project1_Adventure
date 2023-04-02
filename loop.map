@@ -38,9 +38,10 @@
         },
         "4": {
             "name": "School Playground",
-            "desc": "You are in a School Playground with Students.",
+            "desc": "Congratulation! you eascp",
             "exits": {
               
-            }
+            },
+            "required_item": "key"
         }
     }

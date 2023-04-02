@@ -1,6 +1,4 @@
 import json
-import time
-
 
 # Define the player's starting location and inventory
 player_location = 0
@@ -68,40 +66,25 @@ while True:
     verb = command[0]
     args = command[1:]
 
-    # Define a variable to keep track of the start time
-    start_time = time.time()
-
-    weapon_used = False
-
     # Handle the "go" verb
     if verb == "go":
         direction = " ".join(args)
 
-        if verb == "go" and direction == "school_exit":
-            if "key" not in player_inventory:
-                print("You need the key to unlock School exit gate.")
+        if direction in current_room["exits"]:
+            next_room_id = current_room["exits"][direction]
+            next_room = get_room(next_room_id)
+
+            # Check if the room requires an item and if the player has it
+            required_item = next_room.get("required_item")
+            if required_item and required_item not in player_inventory:
+                print("You need the " + required_item + "to unlock next stage.")
             else:
-                print("You use the key to unlock School exit gate.")
-                player_location = current_room["exits"][direction]
-                current_room = get_room(player_location)
-
-                if "student_5" in player_inventory:
-                    print("Congratulations! you saved students!")
-                    print("Thanks for playing!")
-                    break
-                else:
-                    print("You have failed to save students. You lose!")
-                    print("Try Again!")
-                    break
-
-        else:
-            if direction in current_room["exits"]:
-                player_location = current_room["exits"][direction]
-                current_room = get_room(player_location)
+                player_location = next_room_id
+                current_room = next_room
                 print_room(current_room)
 
-            else:
-                print("There's no way to go " + direction + ".")
+        else:
+            print("There's no way to go " + direction + ".")
 
     # Handle the "look" verb
     elif verb == "look":
