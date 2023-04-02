@@ -16,8 +16,8 @@ map_data = json.loads(json_str)
 # Helper function to look up a room by ID
 
 
-def get_room(room_id):
-    return map_data[str(room_id)]
+def get_room(room_index):
+    return map_data[room_index]
 
 # Helper function to print the current room's description and exits
 
@@ -71,15 +71,15 @@ while True:
         direction = " ".join(args)
 
         if direction in current_room["exits"]:
-            next_room_id = current_room["exits"][direction]
-            next_room = get_room(next_room_id)
+            next_room_index = current_room["exits"][direction]
+            next_room = get_room(next_room_index)
 
             # Check if the room requires an item and if the player has it
             required_item = next_room.get("required_item")
             if required_item and required_item not in player_inventory:
                 print("You need the " + required_item + "to unlock next stage.")
             else:
-                player_location = next_room_id
+                player_location = next_room_index
                 current_room = next_room
                 print_room(current_room)
 

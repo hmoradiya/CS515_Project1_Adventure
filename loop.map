@@ -1,47 +1,47 @@
-    {
-        "0": {
-            "name": "School Parking",
-            "desc": "You are standing in front of School Parking. There is a fire accident in the school.",
-            "exits": {
-                "security_cabin": 1
-            }
-        },
-        "1": {
-            "name": "Security Cabin",
-            "desc": "You are in a Security Cabin of the School.",
-            "exits": {
-                "school_parking": 0,
-                "school_library": 2
-            },
-            "items": [
-                "key"
-            ]
-        },
-        "2": {
-            "name": "School Library",
-            "desc": "You are in School Library. There is a door to Faculty Room.",
-            "exits": {
-                "security_cabin": 1,
-                "faculty_room": 3
-            },
-            "items": [
-                "student_5"
-            ]
-        },
-        "3": {
-            "name": "Faculty Room",
-            "desc": "You are in a Faculty Room and there is one emergency exit gate",
-            "exits": {
-                "school_library": 2,
-                "school_exit": 4
-            }
-        },
-        "4": {
-            "name": "School Playground",
-            "desc": "Congratulation! you eascp",
-            "exits": {
-              
-            },
-            "required_item": "key"
-        }
-    }
+[
+   {
+      "name":"School Parking",
+      "desc":"You are standing in front of School Parking. There is a fire accident in the school.",
+      "exits":{
+         "security_cabin":1
+      }
+   },
+   {
+      "name":"Security Cabin",
+      "desc":"You are in a Security Cabin of the School.",
+      "exits":{
+         "school_parking":0,
+         "school_library":2
+      },
+      "items":[
+         "key"
+      ]
+   },
+   {
+      "name":"School Library",
+      "desc":"You are in School Library. There is a door to Faculty Room.",
+      "exits":{
+         "security_cabin":1,
+         "faculty_room":3
+      },
+      "items":[
+         "student_5"
+      ]
+   },
+   {
+      "name":"Faculty Room",
+      "desc":"You are in a Faculty Room and there is one emergency exit gate",
+      "exits":{
+         "school_library":2,
+         "school_exit":4
+      }
+   },
+   {
+      "name":"School Playground",
+      "desc":"Congratulation! you eascp",
+      "exits":{
+         
+      },
+      "required_item":"key"
+   }
+]
