@@ -4,7 +4,10 @@
       "desc":"You are standing in front of School Parking. There is a fire accident in the school.",
       "exits":{
          "security_cabin":1
-      }
+      },
+      "items":[
+         "wappon"
+      ]
    },
    {
       "name":"Security Cabin",
@@ -15,7 +18,8 @@
       },
       "items":[
          "key"
-      ]
+      ],
+      "required_item":"wappon"
    },
    {
       "name":"School Library",
@@ -24,9 +28,7 @@
          "security_cabin":1,
          "faculty_room":3
       },
-      "items":[
-         "student_5"
-      ]
+      "restricted_item":"wappon"
    },
    {
       "name":"Faculty Room",

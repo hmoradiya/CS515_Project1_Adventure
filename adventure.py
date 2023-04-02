@@ -76,8 +76,11 @@ while True:
 
             # Check if the room requires an item and if the player has it
             required_item = next_room.get("required_item")
+            restricted_item = next_room.get("restricted_item")
             if required_item and required_item not in player_inventory:
-                print("You need the " + required_item + "to unlock next stage.")
+                print("You need the " + required_item + " to unlock next stage.")
+            elif restricted_item and restricted_item in player_inventory:
+                print("You need to drop " + restricted_item + " to go to next stage.")
             else:
                 player_location = next_room_index
                 current_room = next_room
