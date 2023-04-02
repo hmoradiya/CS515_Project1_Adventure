@@ -6,23 +6,39 @@ Hardik Moradiya hmoradiy@stevens.edu
 
 **Description**
 
-#School Fire Game
+#Diamond Heist
 
-This is a text-based adventure game where you play as a super hero trying to save student from a school during a fire outbreak. Your objective is to save as students.
+This is a text-based adventure game where you play as a thief trying to stolen the oldest and expensive diamond from a museum.
 
 #How to Run
 
 To run the game, you need to have Python 3 installed. Clone the repository and navigate to the project directory in your terminal. Then, run the following command:
 
+python3 adventure.py loop.map
+or
 python adventure.py loop.map
 
 #How to Play
 
-In the game, you navigate through different rooms in the school by typing commands such as "go school_library" or "get key". Your objective is to find and rescue students as possible from the school exit. You can interact with objects in the rooms by using commands such as "get" or "drop". Also, you can use "help" to know what to do?
+To get started, simply enter commands at the prompt when prompted with "What would you like to do?". Some basic commands you can use include "go" to move to a different location, "get" to pick up an item, "drop" to leave an item in the current room, "look" to examine your surroundings, "inventory" to see what items you're carrying, "help" to see a list of valid commands, and "quit" to exit the game.
+
+#The concept of my Game story
+
+The game Diamond Heist is a text-based adventure where the player navigates a series of stage by entering commands. You'll explore different stage, gather items, and use them to solve puzzles and unlock new areas. The game will provide hints and descriptions to help guide you along the way.
+
+stage 1: You are at the museum parking and you have to enter te mall via security cabin. But, you need a wapon to enter in to security cabin for security. 
+
+stage 2: you enter the security cabin and there is a door to museum hall.
+
+stage 3: you have to stole the oldest expensive diamon (means need to add in your inventory).
+
+stage 4: It is a Security checking area and you can not enter with wappon so you have to drop your wappon in stage 3.
+
+stage 5: It is a final stage and exit gate and you need Diamond to go out or you need diamond to complate the game.
 
 **Bugs or Issues - not resolve**
 
-This code not have any Bug and Issues.
+No
 
 **Difficult issue or bug and how you resolved**
 
@@ -36,15 +52,33 @@ The "help" command is typically invoked by typing "help" followed by pressing th
 
 For example, if a player types "help" in the game, the game may display a list of available commands such as "go", "get", "drop", "drop_all", "look", "inventory", "quit", and "help".
 
+Ex.
+What would you like to do? help
+You can run the following commands:
+  go <direction>
+  get <item>
+  drop <item>
+  drop_all
+  look
+  inventory
+  quit
+  help
+
 **2. "drop" verb or "drop_all" verb**
 
 There are two commands for dropping items in the game: "drop" and "drop_all". The "drop" command lets you discard a specific item in your inventory at your current location, while the "drop_all" command lets you drop all items without specifying each one.
+
+Ex.
+What would you like to do? drop wappon
+You drop the wappon.
+
+What would you like to do? drop_all
+You drop all of your items.
    
 **3. Locked doors** 
 
-To complete the game, you must exit through the school's exit gate with the students. However, the gate is locked and requires a key in your inventory to unlock it.
-  
-**4. Winning and losing conditions**
+It is locked stage and it requires a specific item in your inventory to unlock it.
 
-The winning condition is to have students in your inventory to saved all the students from the fire by the time you exit through the school exit gate. If you exit without students in your inventory, the game is over and you have failed to save them. and as result you loss the game!
-   
+Ex.
+What would you like to do? go exit_gate
+You need the diamond to unlock next stage.
